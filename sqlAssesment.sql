@@ -39,12 +39,12 @@ insert into customer values(10,'Paul','Phil','kenyatta lane 10','Eldoret','1500'
 insert into customer values(11,'Wash','Joseph','kenyatta lane 10','Narok','1500','Tanzania')
 insert into customer values(12,'Densel','pin','kenyatta lane 10','Mombasa','1700','Morrocoo')
 
---------------Question three---------------------------
+
 
 select  customer.Country, count(customer.Country)  myCount from customer group by 
 customer.Country having count(customer.Country) >= 3 order by myCount;
 
---------------Question four---------------------------
+--------------Question three---------------------------
 
 create or alter Procedure insertOrUpdate (@id int, @name varchar(60), @contactName varchar(60),@address varchar(60),@city Varchar(60),@postalCode varchar(60),@country varchar(60))
 as 
@@ -59,12 +59,12 @@ go
 
 exec insertOrUpdate 1,'ruel','mark','outreach center','Jimbo','1000','Eygpt'
 
---------------Question five---------------------------
+--------------Question four---------------------------
 
 select  CustomerName from  customer
 difference
 select distinct  CustomerName from  customer
 
---------------Question six---------------------------
+--------------Question five---------------------------
 
 select  * from  customer where (CustomerID%2) > 0 
